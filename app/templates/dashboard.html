@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Smart Greenhouse{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Welcome to the Dashboard</h1>
+        <!-- Add your dashboard content here -->
+        <p>This is where you can monitor and control your Smart Greenhouse.</p>
+        <div class="btn-group" role="group">
+            <button class="btn btn-primary">Turn On Light</button>
+            <button class="btn btn-danger">Turn Off Light</button>
+            <button class="btn btn-primary">Turn On Fan</button>
+            <button class="btn btn-danger">Turn Off Fan</button>
+            <button class="btn btn-primary">Turn On Water Pump</button>
+            <button class="btn btn-danger">Turn Off Water Pump</button>
+            <button class="btn btn-primary">Turn On Heater</button>
+            <button class="btn btn-danger">Turn Off Heater</button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mt-4">
+            <div class="card-header">Sensor Data</div>
+            <div class="card-body">
+                <!-- Add your sensor data display here -->
+                <p>Temperature: 25°C</p>
+                <p>Humidity: 60%</p>
+                <!-- You can fetch and display real-time data here -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
