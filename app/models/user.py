@@ -1,4 +1,4 @@
-from app import login_manager
+#from app import login_manager
 
 
 class User:
@@ -32,10 +32,10 @@ class User:
         self.password = password
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    # Replace this with your actual user loading logic (e.g., database lookup)
-    return User("Test User", "test@test.com", "testpassword", user_id=user_id )
+# @login_manager.user_loader
+# def load_user(user_id):
+#     # Replace this with your actual user loading logic (e.g., database lookup)
+#     return User("Test User", "test@test.com", "testpassword", user_id=user_id )
 
 # Path: app/models/post.py
 # Compare this snippet from app/routes.py:
