@@ -4,7 +4,7 @@ about: Suggest improvements or updates to the project's documentation
 
 ---
 ----------
-**Describe the Documentation Update**
+**Description**
 
 A clear and concise description of the documentation change you'd like to propose.
 

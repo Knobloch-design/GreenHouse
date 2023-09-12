@@ -4,7 +4,7 @@ about: Report a bug or unexpected behavior in the Flask application
 
 ---
 ----------
-**Describe the Bug**
+**Description**
 
 A clear and concise description of the bug.
 

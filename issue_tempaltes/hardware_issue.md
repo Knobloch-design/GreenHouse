@@ -4,7 +4,7 @@ about: Report a hardware-related issue with Raspberry Pi components
 
 ---
 
-**Describe the Hardware Issue**
+**Description**
 
 A clear and concise description of the hardware issue.
 
