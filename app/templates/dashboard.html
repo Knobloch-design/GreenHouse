@@ -3,20 +3,30 @@
 {% block title %}Dashboard - Smart Greenhouse{% endblock %}
 
 {% block content %}
+<title>Toggle Button</title>
+<style>
+    .active {
+        background-color: green;
+        color: white;
+    }
+    .inactive {
+        background-color: red;
+        color: white;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-8">
         <h1>Welcome to the Dashboard</h1>
         <!-- Add your dashboard content here -->
         <p>This is where you can monitor and control your Smart Greenhouse.</p>
         <div class="btn-group" role="group">
-            <button class="btn btn-primary">Turn On Light</button>
-            <button class="btn btn-danger">Turn Off Light</button>
-            <button class="btn btn-primary">Turn On Fan</button>
-            <button class="btn btn-danger">Turn Off Fan</button>
-            <button class="btn btn-primary">Turn On Water Pump</button>
-            <button class="btn btn-danger">Turn Off Water Pump</button>
-            <button class="btn btn-primary">Turn On Heater</button>
-            <button class="btn btn-danger">Turn Off Heater</button>
+
+            <button id="toggleButton1" class="inactive">Turn OFF Light</button>
+            <button id="toggleButton2" class="inactive">Turn OFF Fan</button>
+            <button id="toggleButton3" class="inactive">Turn OFF Water</button>
+            <button id="toggleButton4" class="inactive">Turn OFF Heater</button>
+
         </div>
     </div>
     <div class="col-md-4">
@@ -31,4 +41,65 @@
         </div>
     </div>
 </div>
+<script>
+    const button1 = document.getElementById("toggleButton1");
+    let isActive1 = false;
+    const button2 = document.getElementById("toggleButton2");
+    let isActive2 = false;
+    const button3 = document.getElementById("toggleButton3");
+    let isActive3 = false;
+    const button4 = document.getElementById("toggleButton4");
+    let isActive4 = false;
+
+    button1.addEventListener("click", () => {
+        if (isActive1) {
+            button1.textContent = "Turn OFF Light";
+            button1.classList.remove("active");
+            button1.classList.add("inactive");
+        } else {
+            button1.textContent = "Turn ON Light";
+            button1.classList.remove("inactive");
+            button1.classList.add("active");
+        }
+        isActive1 = !isActive1;
+    });
+    button2.addEventListener("click", () => {
+    if (isActive2) {
+        button2.textContent = "Turn OFF Fan";
+        button2.classList.remove("active");
+        button2.classList.add("inactive");
+    } else {
+        button2.textContent = "Turn ON Fan";
+        button2.classList.remove("inactive");
+        button2.classList.add("active");
+    }
+    isActive2 = !isActive2;
+    });
+    button3.addEventListener("click", () => {
+    if (isActive3) {
+        button3.textContent = "Turn OFF Water";
+        button3.classList.remove("active");
+        button3.classList.add("inactive");
+    } else {
+        button3.textContent = "Turn ON Water";
+        button3.classList.remove("inactive");
+        button3.classList.add("active");
+    }
+    isActive3 = !isActive3;
+    });
+
+    button4.addEventListener("click", () => {
+    if (isActive4) {
+        button4.textContent = "Turn OFF Heater";
+        button4.classList.remove("active");
+        button4.classList.add("inactive");
+    } else {
+        button4.textContent = "Turn ON Heater";
+        button4.classList.remove("inactive");
+        button4.classList.add("active");
+    }
+    isActive4 = !isActive4;
+    });
+
+</script>
 {% endblock %}
