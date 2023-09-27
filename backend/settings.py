@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'rest_auth'
 ]
 
-# AUTH_USER_MODEL ='api.urls' # I think this should be
+# AUTH_USER_MODEL ='api.urls.py' # I think this should be
 REST_FRAMEWORK = {
   'DEFAULT_PERMISSION_CLASSES': (
       'rest_framework.permissions.IsAuthenticated',
