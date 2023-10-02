@@ -19,5 +19,6 @@ from django.urls import path
 from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
+    path('', include('main.urls')), # link to main/urls.py so we can access these view but going to localhost:8000/...
+    path('', include('django.contrib.auth.urls')) # link to django's built in auth urls
 ]
