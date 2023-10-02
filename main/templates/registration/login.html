@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+
+{% block title %}Login - My Website{% endblock %}
+{% load crispy_forms_tags %}{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card mt-5">
+            <div class="card-header">Login</div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}{{form |crispy }}
+                    <p>Don't Have an Account? Create one <a href="/signup">Here!!</a></p>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
