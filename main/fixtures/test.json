@@ -47,7 +47,6 @@
   {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change control signals", "content_type": 12, "codename": "change_controlsignals"}},
   {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete control signals", "content_type": 12, "codename": "delete_controlsignals"}},
   {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view control signals", "content_type": 12, "codename": "view_controlsignals"}},
-  {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$600000$nijhyd6MhQ6rRYNiCHUv5q$TmnuJAk9/FiJ++2I787IrPQu52w0o79jXVT4DdqTdK4=", "last_login": "2023-10-02T22:54:36.123Z", "is_superuser": false, "username": "iejohnson-test", "first_name": "", "last_name": "", "email": "iejohnson@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2023-10-02T21:36:50.764Z", "groups": [], "user_permissions": []}},
   {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}},
   {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}},
   {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}},
@@ -60,5 +59,15 @@
   {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "main", "model": "sensorreading"}},
   {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "main", "model": "greenhouse"}},
   {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "main", "model": "controlsignals"}},
-  {"model": "sessions.session", "pk": "odarr8o8q5l4iocav5ca71hn09sdcr81", "fields": {"session_data": ".eJxVjDsOwjAUBO_iGlkO8e9R0ucM1j5_cAAlUpxUiLtDpBTQ7szsSwRsaw1by0sYk7iITpx-N0Z85GkH6Y7pNss4T-systwVedAmhznl5_Vw_w4qWv3WmXMP1gRrXCzomHIEiHpAWW-01b7YiGKNMoj2zJ4SO06kSDtySbw_Eeo4qA:1qnRoC:ANwwLDspPaTzf7QTX2SLIz4eFPef5C0GuwHAnE1KcYg", "expire_date": "2023-10-16T22:54:36.125Z"}}
+  {"model": "sessions.session", "pk": "odarr8o8q5l4iocav5ca71hn09sdcr81", "fields": {"session_data": ".eJxVjDsOwjAUBO_iGlkO8e9R0ucM1j5_cAAlUpxUiLtDpBTQ7szsSwRsaw1by0sYk7iITpx-N0Z85GkH6Y7pNss4T-systwVedAmhznl5_Vw_w4qWv3WmXMP1gRrXCzomHIEiHpAWW-01b7YiGKNMoj2zJ4SO06kSDtySbw_Eeo4qA:1qnRoC:ANwwLDspPaTzf7QTX2SLIz4eFPef5C0GuwHAnE1KcYg", "expire_date": "2023-10-16T22:54:36.125Z"}},
+
+  {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$600000$nijhyd6MhQ6rRYNiCHUv5q$TmnuJAk9/FiJ++2I787IrPQu52w0o79jXVT4DdqTdK4=", "last_login": "2023-10-02T22:54:36.123Z", "is_superuser": false, "username": "user1", "first_name": "User", "last_name": "One", "email": "user1@example.com", "is_staff": false, "is_active": true, "date_joined": "2023-10-02T21:36:50.764Z", "groups": [], "user_permissions": []}},
+  {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$600000$nijhyd6MhQ6rRYNiCHUv5q$TmnuJAk9/FiJ++2I787IrPQu52w0o79jXVT4DdqTdK4=", "last_login": "2023-10-02T22:54:36.123Z", "is_superuser": false, "username": "user2", "first_name": "User", "last_name": "Two", "email": "user2@example.com", "is_staff": false, "is_active": true, "date_joined": "2023-10-02T21:36:50.764Z", "groups": [], "user_permissions": []}},
+  {"model": "auth.user", "pk": 3, "fields": {"password": "pbkdf2_sha256$600000$nijhyd6MhQ6rRYNiCHUv5q$TmnuJAk9/FiJ++2I787IrPQu52w0o79jXVT4DdqTdK4=", "last_login": "2023-10-02T22:54:36.123Z", "is_superuser": false, "username": "user3", "first_name": "User", "last_name": "Three", "email": "user3@example.com", "is_staff": false, "is_active": true, "date_joined": "2023-10-02T21:36:50.764Z", "groups": [], "user_permissions": []}},
+  {"model": "auth.user", "pk": 4, "fields": {"password": "pbkdf2_sha256$600000$nijhyd6MhQ6rRYNiCHUv5q$TmnuJAk9/FiJ++2I787IrPQu52w0o79jXVT4DdqTdK4=", "last_login": "2023-10-02T22:54:36.123Z", "is_superuser": false, "username": "iejohnson-test", "first_name": "ivan", "last_name": "johnson", "email": "iejohnson@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2023-10-02T21:36:50.764Z", "groups": [], "user_permissions": []}},
+
+  {"model": "sensor_data.greenhouse", "pk": 1, "fields": {"name": "Greenhouse One", "description": "Description of Greenhouse One", "location": "Location One", "timestamp": "2023-10-02T22:54:36.123Z", "user": 1}},
+  {"model": "sensor_data.sensorreading", "pk": 1, "fields": {"temperature": 25.5, "humidity": 60.0, "timestamp": "2023-10-02T22:54:36.123Z"}},
+  {"model": "sensor_data.controlsignals", "pk": 1, "fields": {"heating_pad": true, "light": false, "timestamp": "2023-10-02T22:54:36.123Z", "greenhouse": 1}}
+
 ]
