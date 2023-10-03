@@ -1,0 +1,11 @@
+{% extends "main/base.html" %}
+
+{% block title %}Home PAGE {% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <h1>Control Signals Status</h1>
+    <p>Heating Pad: {% if main.control_signals.heating_pad %}ON{% else %}OFF{% endif %}</p>
+    <p>Light: {% if control_signals.light %}ON{% else %}OFF{% endif %}</p>
+</div>
+{% endblock %}
