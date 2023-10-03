@@ -5,6 +5,8 @@ from .forms import RegistrationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login, authenticate, logout
 
+from .models import ControlSignals
+
 
 def home(request):
     return render(request, "main/home.html", {})
@@ -29,3 +31,10 @@ def sign_up(request):
         form = RegistrationForm()
 
     return render(request, "registration/sign_up.html", {"form": form})
+
+# backend/Main/views.py
+
+
+def control_signals_status(request):
+    control_signals = ControlSignals.objects.last()  # Get the latest control signal entry
+    return render(request, 'main/controll_signals.html', {'control_signals': control_signals})
