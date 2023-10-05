@@ -2,8 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import RegistrationForm
 
 # Create your views here.
-from django.contrib.auth.views import LoginView
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import login
 
 from .models import ControlSignals
 
@@ -38,3 +37,13 @@ def sign_up(request):
 def control_signals_status(request):
     control_signals = ControlSignals.objects.last()  # Get the latest control signal entry
     return render(request, 'main/controll_signals.html', {'control_signals': control_signals})
+
+from main.MQTT_SUB import formatted_data,data_lock, mqtt_client
+def live_data(request):
+    global formatted_data, data_lock, mqtt_client
+    print("live_data")
+    print("formatted_data",formatted_data)
+    print("mqtt_client",mqtt_client.get_last_data())
+    print("mqtt_client",mqtt_client)
+    live_data = mqtt_client.last_data  # Safely access formatted_data
+    return render(request, 'main/live_data.html', {'live_data': live_data})

@@ -1,6 +1,7 @@
 asgiref==3.7.2
 black==23.9.1
 certifi==2023.7.22
+channels==4.0.0
 click==8.1.7
 contourpy==1.1.1
 crispy==0.7.4
@@ -9,6 +10,8 @@ cycler==0.11.0
 Django==4.2.5
 django-crispy-forms==2.0
 djangorestframework==3.14.0
+djangorestframework-jwt==1.11.0
+djangorestframework-simplejwt==5.3.0
 fabio==2023.6.0
 fonttools==4.42.1
 h5py==3.9.0
@@ -17,10 +20,12 @@ matplotlib==3.8.0
 mypy-extensions==1.0.0
 numpy==1.26.0
 packaging==23.1
+paho-mqtt==1.6.1
 pathspec==0.11.2
 Pillow==10.0.1
 platformdirs==3.11.0
 psycopg2-binary==2.9.8
+PyJWT==1.7.1
 pyparsing==3.1.1
 PyQt5==5.15.9
 PyQt5-Qt5==5.15.2
