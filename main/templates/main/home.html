@@ -1,0 +1,98 @@
+{% extends "main/base.html" %}
+
+{% block title %}Home PAGE {% endblock %}
+
+{% block content %}
+<head>
+  <title>Environmental Data</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+
+      .data-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+
+      .data-item {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          margin-bottom: 10px;
+          text-align: center;
+      }
+
+      @media screen and (min-width: 768px) {
+          .data-item {
+              width: 48%;
+              margin-right: 2%;
+          }
+      }
+  </style>
+</head>
+<body>
+  <h1>Environmental Data</h1>
+  <div class="data-container">
+      <div class="data-item">
+          <h2>Soil Temperature</h2>
+          <p id="soil-temperature">--°C</p>
+      </div>
+      <div class="data-item">
+          <h2>Air Temperature</h2>
+          <p id="air-temperature">--°C</p>
+      </div>
+      <div class="data-item">
+          <h2>Humidity</h2>
+          <p id="humidity">--%</p>
+      </div>
+      <div class="data-item">
+          <h2>Soil Moisture</h2>
+          <p id="soil-moisture">--%</p>
+      </div>
+  </div>
+
+  <!-- You can use JavaScript to update these values in real-time -->
+  <script>
+
+
+        // Function to fetch and display CSV data
+      function fetchData() {
+        fetch('GreenHouse/environmental_data.csv')  // Replace with the path to your CSV file
+          .then(response => response.text())
+          .then(data => {
+              const lines = data.split('\n');
+              let latest = lines[-1];
+              const cells = latest.split(',');
+                          
+                
+              if (cells.length === 5) {
+                  let time = cells[0];
+                  let soilTemperature = cells[1];
+                  let airTemperature = cells[2];
+                  let humidity = cells[3];
+                  let soilMoisture = cells[4];
+              }
+              });
+
+        }
+
+      // Function to update the displayed values
+      function updateData() {
+          document.getElementById('soil-temperature').textContent = `${soilTemperature}°C`;
+          document.getElementById('air-temperature').textContent = `${airTemperature}°C`;
+          document.getElementById('humidity').textContent = `${humidity}%`;
+          document.getElementById('soil-moisture').textContent = `${soilMoisture}%`;
+      }
+
+      // Initial data update
+      updateData();
+
+      // You can use setInterval to periodically update the data
+      // For example, update every 5 seconds:
+      // setInterval(updateData, 5000);
+  </script>
+</body>
+{% endblock %}
